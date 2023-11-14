@@ -13,4 +13,7 @@ A kernel-land rootkit for Linux
 
 ## persistence
 * crontab? perhaps
-* setuid binary 
+* setuid binary
+
+## acknowledgement
+heavily inspired from many of the rootkits from [awesome linux rootkits](https://github.com/milabs/awesome-linux-rootkits)
