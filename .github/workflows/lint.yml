@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: cpp-linter/cpp-linter-action@v2
+        id: lint
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -19,7 +20,7 @@ jobs:
 
   # build the application
   build:
-    if: steps.linter.output.checks-failed == 0
+    if: steps.lint.output.checks-failed == 0
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
